@@ -2,11 +2,15 @@
 {
     using System.Data.Entity;
 
-    class DataContext : DbContext
+    public class DataContext : DbContext
     {
         public DataContext() : base("DefaultConnection")
         {
-
         }
+
+        public DbSet<Category> Categories { get; set; }
+
+        public DbSet<Product> Products { get; set; }
+
     }
 }
